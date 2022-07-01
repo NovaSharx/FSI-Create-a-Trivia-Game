@@ -9,12 +9,13 @@ function runTriviaGame() {
         userAnswer = window.prompt(question.text)
         if (userAnswer === question.correctAnswer) {
             userScore += 10
+            console.log('correct')
         }
-    }
+    } // Prompts the questions and adds to the total if answer is correct.
 
     window.alert('Your score is: '+ userScore)
     promptRetry()
-}
+} // this function runs the Trivia Game.
 
 function promptRetry() {
     let retry = window.prompt('Would you like to continue the game? (Y/N):')
@@ -28,7 +29,7 @@ function promptRetry() {
         window.alert('That was not a valid response.')
         promptRetry()
     }
-}
+} // Prompts the user to retry the trivia game or not.
 
-runTriviaGame()
+runTriviaGame() // Executes the game on startup.
 
